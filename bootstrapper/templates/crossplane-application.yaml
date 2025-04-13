@@ -8,8 +8,11 @@ metadata:
 spec:
   project: default
   source:
-  chart:
-    repoURL: "{{ .Values.setupArtifactory }}/v{{ .Values.crossplaneSetupVersion }}/crossplane-setup-{{ .Values.crossplaneSetupVersion }}.tgz"
+    helm:
+      chart: crossplane-setup
+      repoURL: "{{ .Values.setupArtifactory }}"
+      targetRevision: "{{ .Values.crossplaneSetupVersion }}"
+      path: "crossplane-setup-{{ .Values.crossplaneSetupVersion }}.tgz"
 ---
 kind: Namespace
 apiVersion: v1
