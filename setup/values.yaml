@@ -1,0 +1,2 @@
+setupArtifactory: "https://github.com/Hasankanso/aks-crossplane-setup/releases/download"
+crossplaneSetupVersion: "0.0.1"
